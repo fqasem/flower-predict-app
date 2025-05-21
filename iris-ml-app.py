@@ -10,23 +10,23 @@ This app predicts the **Iris flower** type based on input parameters such as sep
 """)
 
 st.sidebar.header('User Input Parameters')
-st.sidebar.write("""
-    Sepal length and width and petal length and width are the features used to predict the type of Iris flower.
-    The dataset contains three classes of iris plants: Iris Setosa, Iris Versicolor, and Iris Virginica.
-    The features are:
-    - Sepal length
-    - Sepal width
-    - Petal length
-    - Petal width
-    The target variable is the type of iris flower, which can be one of the following:
-    - Iris Setosa
-    - Iris Versicolor
-    - Iris Virginica
-    The app uses the Iris dataset from the `sklearn.datasets` module, which is a well-known dataset for classification tasks.
-    The dataset contains 150 samples, with 50 samples for each of the three classes.
-    The model used for prediction is a Random Forest Classifier, which is a type of ensemble learning method that combines multiple decision trees to improve accuracy and reduce overfitting.
-    The app uses the `RandomForestClassifier` from the `sklearn.ensemble` module to train the model on the iris dataset and make predictions based on user input.            
-T""")
+st.sidebar.markdown("""
+**Features used to predict the type of Iris flower:**
+- Sepal length
+- Sepal width
+- Petal length
+- Petal width
+
+**Classes of iris plants:**
+- Iris Setosa
+- Iris Versicolor
+- Iris Virginica
+
+The app uses the Iris dataset from `sklearn.datasets`, a well-known dataset for classification tasks (150 samples, 50 per class).  
+Features are continuous values; the target is categorical.
+
+The model: `RandomForestClassifier` from `sklearn.ensemble` is used to train and make predictions based on user input.
+""")
 
 def user_input_features():
     sepal_length = st.sidebar.slider('Sepal length', 4.3, 7.9, 5.4)
