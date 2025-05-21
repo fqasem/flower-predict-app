@@ -29,10 +29,10 @@ The model: `RandomForestClassifier` from `sklearn.ensemble` is used to train and
 """)
 
 def user_input_features():
-    sepal_length = st.sidebar.slider('Sepal length', 4.3, 7.9, 5.4)
-    sepal_width = st.sidebar.slider('Sepal width', 2.0, 4.4, 3.4)
-    petal_length = st.sidebar.slider('Petal length', 1.0, 6.9, 1.3)
-    petal_width = st.sidebar.slider('Petal width', 0.1, 2.5, 0.2)
+    sepal_length = st.sidebar.slider('Sepal length', 4.3, 7.9, 5.4, help="The length of the sepal in centimeters.")
+    sepal_width = st.sidebar.slider('Sepal width', 2.0, 4.4, 3.4, help="The width of the sepal in centimeters.")
+    petal_length = st.sidebar.slider('Petal length', 1.0, 6.9, 1.3, help="The length of the petal in centimeters.")
+    petal_width = st.sidebar.slider('Petal width', 0.1, 2.5, 0.2, help="The width of the petal in centimeters.")
     data = {'sepal_length': sepal_length,
             'sepal_width': sepal_width,
             'petal_length': petal_length,
